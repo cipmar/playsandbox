@@ -1,0 +1,7 @@
+@(orderForm: Form[Order])
+
+@main("Order Add"){
+    @helper.form(action = routes.Application.orderAddSubmit, 'id -> "orderAddForm") {
+        @helper.inputText()
+    }
+}

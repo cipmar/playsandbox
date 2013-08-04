@@ -1,0 +1,24 @@
+@(orders: List[Order])
+
+<h3>Orders</h3>
+<table border="1" cellpadding="10" cellspacing="0">
+	<thead style="font-weight: bold;">
+		<td>Customer ID</td>
+		<td>Item Name</td>
+		<td>Item Qty</td>
+		<td>Item Price</td>
+		<td>Edit</td>
+	</thead>
+
+	@for(order <- orders) {
+	<tr>
+		<td>@order.customerId</td>
+		<td>@order.itemName</td>
+		<td>@order.itemQry</td>
+		<td>@order.itemPrice</td>
+		<td><a href="/orderEdit/@order.orderId">Edit</a></td>
+	</tr>
+	}
+</table>
+
+<a href="orderAdd">Add new order</a>
