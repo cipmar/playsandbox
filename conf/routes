@@ -4,6 +4,9 @@
 
 # Home page
 GET     /                           controllers.Application.index
+GET     /request1                   controllers.Application.request1
+GET     /request2                   controllers.Application.request2
+GET     /request3                   controllers.Application.request3
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
